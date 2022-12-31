@@ -1,23 +1,26 @@
+import { useState } from 'react';
+
 import memesData from "../memeData";
 
 const MainContent = () => {
 
-    const getMeme = async e => {
-        // let url = ``;
+    const [meme, setMeme] = useState(memesData);
 
-        e.preventDefault()
-        let response = fetch(memesData);
-        let data = response.json();
-        console.log(data)
+    const getMeme = async e => {
+
+        const memesArray = meme.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        let url = memesArray[randomNumber].url
+        console.log(memesArray)
     }
     return (
-        <section id="container" >
-            <form id="form-container" onSubmit={getMeme}>
+        <section id="container">
+            <div id="form-container">
                 <input type='text' placeholder="enter top text" />
                 <input type='text' placeholder="enter bottom text" />
-                <button id="form-btn">Get a new meme image</button>
-            </form>
-            <div id="meme-display"></div>
+                <button id="form-btn" onClick={getMeme}>Get a new meme image</button>
+            </div>
+            <img id="meme-display" src='{url}' alt="meme-image" />
         </section>
      );
 }
