@@ -1,10 +1,12 @@
-import Header from "./Components/Header"
+import Header from "./Components/Header";
+import MainContent from "./Components/MainContent";
 
 function App() {
 
   return (
-    <main className="App">
+    <main>
       <Header />
+      <MainContent />
     </main>
   )
 }
