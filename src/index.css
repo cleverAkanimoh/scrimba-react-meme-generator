@@ -57,7 +57,7 @@ h3 {
 
 h4 {
   font-size: 0.7rem;
-  color: #e0e0e0;
+  color: #ebebeb;
 }
 
 /* 
@@ -94,6 +94,13 @@ input::placeholder {
   color: #000;
 }
 
+input:hover {
+  border-color: #672280;
+}
+input:focus {
+  border-color: #000 !important;
+}
+
 #form-btn {
   grid-column: 1 / -1;
   height: 40px;
@@ -117,4 +124,21 @@ input::placeholder {
   border: 1px solid #000;
   margin-top: 20px;
   border-radius: 0.3rem;
+}
+
+@media screen and (min-width: 500px) {
+  main {
+    width: 450px;
+  }
+  header {
+    padding: 0 0.7rem;
+    height: 60px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-left: 5px; 
+  }
+  h4 {
+    font-size: 0.9rem
+  }
 }
