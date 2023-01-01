@@ -21,14 +21,14 @@ const MainContent = () => {
         }))
     }
 
-    const topTextValueUpdate = () => setMeme(prevMeme => ({
+    const topTextValueUpdate = e => setMeme(prevMeme => ({
         ...prevMeme,
-        topText: 'top text value'
+        topText: e.target.value
     }))
 
-    const bottomTextValueUpdate = () => setMeme(prevMeme => ({
+    const bottomTextValueUpdate = e => setMeme(prevMeme => ({
         ...prevMeme,
-        bottomText: 'bottom text value'
+        bottomText: e.target.value
     }))
 
     return (
