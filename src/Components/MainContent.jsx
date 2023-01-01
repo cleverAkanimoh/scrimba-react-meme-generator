@@ -41,7 +41,7 @@ const MainContent = () => {
             <picture>
                 <p id="topText">{ meme.topText }</p>
                 <p id="bottomText">{ meme.bottomText }</p>
-                <img id="meme-display" src={meme.randomImage} alt="meme-image" />
+                <img id="meme-display" src={ meme.randomImage } alt="meme-image" />
             </picture>
         </section>
     );
