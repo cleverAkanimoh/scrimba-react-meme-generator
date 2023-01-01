@@ -21,21 +21,16 @@ const MainContent = () => {
         }))
     }
 
-    const topTextValueUpdate = e => setMeme(prevMeme => ({
+    const TextValueUpdate = e => setMeme(prevMeme => ({
         ...prevMeme,
-        topText: e.target.value
-    }))
-
-    const bottomTextValueUpdate = e => setMeme(prevMeme => ({
-        ...prevMeme,
-        bottomText: e.target.value
+        [e.target.name] : e.target.value
     }))
 
     return (
         <section id="container">
             <div id="form-container">
-                <input type='text' onInput={topTextValueUpdate} placeholder="enter top text" />
-                <input type='text' onInput={bottomTextValueUpdate} placeholder="enter bottom text" />
+                <input type='text' name='topText' onInput={TextValueUpdate} placeholder="enter top text" />
+                <input type='text' name='bottomText' onInput={TextValueUpdate} placeholder="enter bottom text" />
                 <button id="form-btn" onClick={getMemeUrl}>Get a new meme image</button>
             </div>
             <picture>
