@@ -7,7 +7,7 @@ const MainContent = () => {
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://i.imgflip.com/1bij.jpg" 
+        randomImage: "http://i.imgflip.com/1bij.jpg"
     })
     const [allMemeImages, setAllMemeImages] = useState(memesData)
 
@@ -28,7 +28,9 @@ const MainContent = () => {
                 <input type='text' placeholder="enter bottom text" />
                 <button id="form-btn" onClick={getMemeUrl}>Get a new meme image</button>
             </div>
-            <img id="meme-display" src={meme.randomImage} alt="meme-image" />
+            <picture>
+                <img id="meme-display" src={meme.randomImage} alt="meme-image" />
+            </picture>
         </section>
     );
 }

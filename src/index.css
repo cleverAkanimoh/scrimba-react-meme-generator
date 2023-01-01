@@ -119,6 +119,11 @@ input:focus {
   border: 1px solid;
 }
 
+picture {
+  width: 100%;
+  height: 250px;
+}
+
 #meme-display {
   width: 100%;
   height: 250px;
