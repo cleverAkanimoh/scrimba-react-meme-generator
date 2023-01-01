@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import defaultmemeImage from "../defaultMemeImage.jpg";
 import memesData from "../memeData";
 
 const MainContent = () => {
@@ -7,7 +8,7 @@ const MainContent = () => {
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://i.imgflip.com/1bij.jpg"
+        randomImage: defaultmemeImage
     })
     const [allMemeImages, setAllMemeImages] = useState(memesData)
 
