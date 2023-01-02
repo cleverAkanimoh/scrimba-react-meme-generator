@@ -21,10 +21,13 @@ const MainContent = () => {
         }))
     }
 
-    const TextValueUpdate = e => setMeme(prevMeme => ({
+    const TextValueUpdate = e => {
+        const {name, value} = e.target
+        setMeme(prevMeme => ({
         ...prevMeme,
-        [e.target.name]: e.target.value
+        [name]: value
     }))
+}
 
     return (
         <section id="container">
