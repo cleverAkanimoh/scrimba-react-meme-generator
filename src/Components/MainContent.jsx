@@ -23,20 +23,32 @@ const MainContent = () => {
 
     const TextValueUpdate = e => setMeme(prevMeme => ({
         ...prevMeme,
-        [e.target.name] : e.target.value
+        [e.target.name]: e.target.value
     }))
 
     return (
         <section id="container">
             <div id="form-container">
-                <input type='text' name='topText' onInput={TextValueUpdate} placeholder="enter top text" />
-                <input type='text' name='bottomText' onInput={TextValueUpdate} placeholder="enter bottom text" />
+                <input 
+                    type='text'
+                    name='topText' 
+                    onInput={TextValueUpdate} 
+                    placeholder="enter top text"
+                    value={meme.topText}
+                />
+                <input 
+                    type='text' 
+                    name='bottomText'
+                    onInput={TextValueUpdate} 
+                    placeholder="enter bottom text"
+                    value={meme.bottomText}
+                />
                 <button id="form-btn" onClick={getMemeUrl}>Get a new meme image</button>
             </div>
             <picture>
-                <p id="topText">{ meme.topText }</p>
-                <p id="bottomText">{ meme.bottomText }</p>
-                <img id="meme-display" src={ meme.randomImage } alt="meme-image" />
+                <p id="topText">{meme.topText}</p>
+                <p id="bottomText">{meme.bottomText}</p>
+                <img id="meme-display" src={meme.randomImage} alt="meme-image" />
             </picture>
         </section>
     );
