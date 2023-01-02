@@ -95,10 +95,10 @@ input::placeholder {
 }
 
 input:hover {
-  border-color: #672280;
+  border: 2px solid #672280;
 }
 input:focus {
-  border-color: #000 !important;
+  border:2px solid #000 !important;
 }
 
 #form-btn {
