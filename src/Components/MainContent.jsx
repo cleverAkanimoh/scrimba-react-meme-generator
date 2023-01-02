@@ -46,7 +46,7 @@ const MainContent = () => {
                     placeholder="enter bottom text"
                     value={meme.bottomText}
                 />
-                <button id="form-btn" onClick={getMemeUrl}>Get a new meme image</button>
+                <button id="form-btn" onClick={getMemeUrl}>Get a new meme image 🖼</button>
             </div>
             <picture>
                 <p id="topText">{meme.topText}</p>
