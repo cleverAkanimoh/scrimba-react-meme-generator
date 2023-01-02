@@ -5,8 +5,8 @@ import memesData from "../memeData";
 const MainContent = () => {
 
     const [meme, setMeme] = useState({
-        topText: "top text will go here",
-        bottomText: "bottom text will go here",
+        topText: "",
+        bottomText: "",
         randomImage: defaultmemeImage
     })
     const [allMemeImages, setAllMemeImages] = useState(memesData)
